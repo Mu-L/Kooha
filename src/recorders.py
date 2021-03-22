@@ -76,7 +76,6 @@ class AudioRecorder:
         if (self.record_audio and self.default_audio_output) or (self.record_microphone and self.default_audio_input):
             self.audio_gst.set_state(Gst.State.NULL)
 
-            print(f'{self.multiplexer} name=mux ! filesink location={self.saving_location} filesrc location={self.get_tmp_dir("video")} ! {self.video_decoder} filesrc location={self.get_tmp_dir("audio")} ! matroskademux ! mux.')
             self.joiner_gst = Gst.parse_launch(f'{self.multiplexer} name=mux ! filesink location={self.saving_location} filesrc location={self.get_tmp_dir("video")} ! {self.video_decoder} filesrc location={self.get_tmp_dir("audio")} ! matroskademux ! mux.')
             bus = self.joiner_gst.get_bus()
             bus.add_signal_watch()
@@ -101,9 +100,6 @@ class AudioRecorder:
             self.audio_gst.set_state(Gst.State.NULL)
             err, debug = message.parse_error()
             print("audio_gst Error: %s" % err, debug)
-
-    def get_encoder(self):
-        pass
 
     @staticmethod
     def get_default_audio_devices():
