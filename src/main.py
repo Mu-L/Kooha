@@ -41,9 +41,6 @@ class Application(Gtk.Application):
         GLib.set_application_name("Kooha")
         GLib.set_prgname('io.github.seadve.Kooha')
 
-        plugin = Gst.ElementFactory.find("x264enc")
-        print(plugin)
-
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
