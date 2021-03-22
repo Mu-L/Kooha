@@ -75,6 +75,9 @@ class AudioRecorder:
             err, debug = message.parse_error()
             print("audio_gst Error: %s" % err, debug)
 
+    def get_encoder(self):
+        pass
+
     @staticmethod
     def get_default_audio_devices():
         pactl_output = Popen(f'pactl info | grep Default | tail -n +3 | cut -d" " -f3', shell=True, text=True, stdout=PIPE).stdout.read().rstrip()
