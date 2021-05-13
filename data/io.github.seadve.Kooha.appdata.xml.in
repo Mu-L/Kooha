@@ -44,6 +44,37 @@
   </screenshots>
 
   <releases>
+    <release version="1.1.3" date="2021-05-04">
+      <description>
+        <p>New fixes and translations update coming this release:</p>
+        <ul>
+          <li>More responsive shortcuts</li>
+          <li>Fix crashing when no desktop environment is set up</li>
+          <li>Updated Slovak Translations</li>
+          <li>Updated Portuguese (Brazil) translations</li>
+          <li>Updated Russian translations</li>
+          <li>Updated Indonesian translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.2" date="2021-04-25">
+      <description>
+        <p>This is a minor release composing of fixes and improvements:</p>
+        <ul>
+          <li>Minor performance optimizations</li>
+          <li>Updated Dutch translations</li>
+          <li>Updated Turkish translations</li>
+          <li>Updated Spanish translations</li>
+          <li>Updated Indonesian translations</li>
+          <li>Updated Filipino translations</li>
+          <li>Updated Italian translations</li>
+          <li>Updated French translations</li>
+          <li>Updated German translations</li>
+          <li>Updated Norwegian Bokmål translations</li>
+          <li>Updated Chinese(simplified) translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.1" date="2021-04-09">
       <description>
         <p>This release is composing of minor changes:</p>

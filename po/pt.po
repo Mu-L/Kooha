@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the kooha package.
 # telmo bruno silva seabra <telmoseabra@petalmail.com>, 2021.
+# ssantos <ssantos@web.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kooha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-11 07:47+0800\n"
-"PO-Revision-Date: 2021-03-28 14:46+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-05-05 08:31+0800\n"
+"PO-Revision-Date: 2021-05-12 17:33+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/kooha/pot-"
 "file/pt/>\n"
 "Language: pt\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: data/io.github.seadve.Kooha.desktop.in:3
 #: data/io.github.seadve.Kooha.appdata.xml.in:7
@@ -26,59 +27,61 @@ msgstr "Kooha"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/io.github.seadve.Kooha.desktop.in:11
 msgid "Screencast;Recorder;Screen;Video;"
-msgstr "Captura de ecrã, gravador, ecrã, video"
+msgstr "Captura de ecrã;gravador;ecrã;video;"
 
-#: data/io.github.seadve.Kooha.appdata.xml.in:8
+#: data/io.github.seadve.Kooha.appdata.xml.in:8 src/main.py:139
 msgid "Elegantly record your screen"
-msgstr ""
+msgstr "Grave o seu ecrã com estilo"
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:10
 msgid ""
 "Capture your screen in a straightforward and painless way without "
 "distractions."
-msgstr ""
+msgstr "Grave o seu ecrã de forma simples e, fácil e sem distrações."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:11
 msgid ""
 "Kooha is a simple screen recorder with a minimalist interface. You can just "
 "click the record button without having to configure a bunch of settings."
 msgstr ""
+"Kooha é um gravador de ecrã simples com uma interface minimalista. Basta "
+"clicar no botão de gravação sem ter de configurar um monte de definições."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:12
 msgid "The main features of Kooha include the following:"
-msgstr ""
+msgstr "As principais características da Kooha incluem as seguintes:"
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:14
 msgid "🎥 Capture your screen without any hassle."
-msgstr ""
+msgstr "🎥 Capture o seu ecrã sem qualquer problema."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:15
 msgid "🎙️ Record your microphone, computer sounds, or both at the same time."
-msgstr ""
+msgstr "🎙️ Grave o seu microfone, sons do computador ou ambos ao mesmo tempo."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:16
 msgid "🖼️ Select an area of your screen to record."
-msgstr ""
+msgstr "🖼️ Selecione uma área da ecrã para gravar."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:17
 msgid "⏲️ Set delay to prepare before you start recording."
-msgstr ""
+msgstr "⏲️ Defina o atraso para se preparar antes de iniciar a gravação."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:18
 msgid "📼 Support for the free Matroska and WebM formats."
-msgstr ""
+msgstr "📼 Suporte para os formatos gratuitos Matroska e WebM."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:19
 msgid "🖱️ Hide or show mouse pointer."
-msgstr ""
+msgstr "🖱️ Oculte ou exiba o ponteiro do mouse."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:20
 msgid "💾 Choose a saving location for your recording."
-msgstr ""
+msgstr "💾 Escolha um local para gravar a gravação."
 
 #: data/io.github.seadve.Kooha.appdata.xml.in:21
 msgid "⌨️ Utilize helpful keyboard shortcuts."
-msgstr ""
+msgstr "⌨️ Utilize atalhos de teclado úteis."
 
 #. Translators: please do NOT translate this
 #: data/io.github.seadve.Kooha.appdata.xml.in:29
@@ -101,7 +104,7 @@ msgstr "Mostrar atalhos de teclado"
 msgid "Quit"
 msgstr "Sair"
 
-#: data/ui/shortcuts.ui:39 data/ui/window.ui:178
+#: data/ui/shortcuts.ui:39 data/ui/window.ui:175
 msgid "Recording"
 msgstr "Gravando"
 
@@ -135,137 +138,132 @@ msgstr "Alterar ponteiro"
 
 #: data/ui/window.ui:50
 msgid "Full Screen"
-msgstr ""
+msgstr "Ecrã cheio"
 
 #: data/ui/window.ui:62
 msgid "Selection"
-msgstr ""
+msgstr "Seleção"
 
 #: data/ui/window.ui:104
 msgid "Record computer sounds"
-msgstr ""
+msgstr "Gravar sons do computador"
 
-#: data/ui/window.ui:119
+#: data/ui/window.ui:118
 msgid "Record from microphone"
-msgstr ""
+msgstr "Gravar som do microfone"
 
-#: data/ui/window.ui:134
+#: data/ui/window.ui:132
 msgid "Show pointer"
-msgstr ""
+msgstr "Mostrar ponteiro"
 
-#: data/ui/window.ui:148
+#: data/ui/window.ui:145
 msgid "Record"
-msgstr ""
+msgstr "Gravar"
 
-#: data/ui/window.ui:198
+#: data/ui/window.ui:195
 msgid "Stop"
-msgstr ""
+msgstr "Parar"
 
-#: data/ui/window.ui:225
+#: data/ui/window.ui:222
 msgid "Recording in…"
-msgstr ""
+msgstr "Gravando em…"
 
-#: data/ui/window.ui:244
+#: data/ui/window.ui:241
 msgid "Cancel Delay"
-msgstr ""
+msgstr "Cancelar Atraso"
 
-#: data/ui/window.ui:271
+#: data/ui/window.ui:268
 msgid "Processing"
-msgstr ""
+msgstr "Em processamento"
 
-#: data/ui/window.ui:297
+#: data/ui/window.ui:294
 msgid "Delay"
-msgstr ""
+msgstr "Atraso"
 
-#: data/ui/window.ui:299
+#: data/ui/window.ui:296
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
-#: data/ui/window.ui:304
+#: data/ui/window.ui:301
 msgid "5 seconds"
-msgstr ""
+msgstr "5 segundos"
 
-#: data/ui/window.ui:309
+#: data/ui/window.ui:306
 msgid "10 seconds"
-msgstr ""
+msgstr "10 segundos"
 
-#: data/ui/window.ui:315
+#: data/ui/window.ui:312
 msgid "Video Format"
-msgstr ""
+msgstr "Formato de Vídeo"
 
-#: data/ui/window.ui:317
+#: data/ui/window.ui:314
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
-#: data/ui/window.ui:322
+#: data/ui/window.ui:319
 msgid "MKV"
-msgstr ""
+msgstr "MKV"
 
-#: data/ui/window.ui:329
+#: data/ui/window.ui:326
 msgid "Save to…"
-msgstr ""
+msgstr "Salvar para …"
 
-#: data/ui/window.ui:335
+#: data/ui/window.ui:332
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de teclado"
 
-#: data/ui/window.ui:339
+#: data/ui/window.ui:336
 msgid "About Kooha"
-msgstr ""
+msgstr "Sobre o Kooha"
 
-#: src/main.py:91
+#: src/main.py:92
 msgid "Select a Folder"
-msgstr ""
-
-#: src/main.py:93
-msgid "Cancel"
-msgstr ""
+msgstr "Selecione uma Pasta"
 
 #: src/main.py:94
-msgid "Select"
-msgstr ""
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: src/main.py:109
-msgid "Save location not set"
-msgstr ""
+#: src/main.py:95
+msgid "Select"
+msgstr "Selecione"
 
 #: src/main.py:110
+msgid "Save location not set"
+msgstr "Local de salvamento não definido"
+
+#: src/main.py:111
 msgid "Please choose an accessible location and retry."
-msgstr ""
+msgstr "Por favor escolha um local acessível e tente novamente."
 
-#: src/main.py:131
-msgid "Elegantly record your screen "
-msgstr ""
-
-#: src/main.py:134
+#: src/main.py:142
 msgid "Copyright 2021 Dave Patrick"
-msgstr ""
+msgstr "Copyright 2021 Dave Patrick"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/main.py:136
+#: src/main.py:144
 msgid "translator-credits"
-msgstr ""
+msgstr "Vitor Cardoso"
 
-#: src/main.py:137
+#: src/main.py:145
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
+
+#: src/window.py:79
+msgid "Recording cannot start"
+msgstr "Gravação não pode iniciar"
 
 #: src/window.py:80
-msgid "Recording cannot start"
-msgstr ""
-
-#: src/window.py:81
 msgid "The saving location you have selected may have been deleted."
-msgstr ""
+msgstr "O local que selecionou pode ter sido deletado."
+
+#: src/window.py:127
+msgid "Screencast Recorded!"
+msgstr "Gravação de ecrã gravada!"
 
 #: src/window.py:128
-#, fuzzy
-msgid "Screencast Recorded!"
-msgstr "Captura de ecrã, gravador, ecrã, video"
-
-#: src/window.py:129
 msgid "The recording has been saved in"
-msgstr ""
+msgstr "A gravação foi gravada em"
 
 #~ msgid "Simple screen recorder"
 #~ msgstr "Gravador de ecrã simples"

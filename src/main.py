@@ -40,7 +40,7 @@ class Application(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_resource('/io/github/seadve/Kooha/style.css')
+        css_provider.load_from_resource('/io/github/seadve/Kooha/ui/style.css')
         screen = Gdk.Screen.get_default()
         Gtk.StyleContext.add_provider_for_screen(
             screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
@@ -59,11 +59,11 @@ class Application(Gtk.Application):
 
     def setup_actions(self):
         settings_actions = [
-            "record-audio",
-            "record-microphone",
-            "show-pointer",
-            "record-delay",
-            "video-format",
+            ("record-audio", ("<Ctrl>a",)),
+            ("record-microphone", ("<Ctrl>m",)),
+            ("show-pointer", ("<Ctrl>p",)),
+            ("record-delay", None),
+            ("video-format", None),
         ]
 
         simple_actions = [
@@ -75,9 +75,11 @@ class Application(Gtk.Application):
             ("quit", self.on_quit, ("<Ctrl>q",)),
         ]
 
-        for action in settings_actions:
+        for action, accel in settings_actions:
             settings_action = self.settings.create_action(action)
             self.add_action(settings_action)
+            if accel:
+                self.set_accels_for_action(f"app.{action}", accel)
 
         for action, callback, accel in simple_actions:
             simple_action = Gio.SimpleAction.new(action, None)
@@ -114,7 +116,7 @@ class Application(Gtk.Application):
 
     def show_shortcuts_window(self, action, param):
         builder = Gtk.Builder()
-        builder.add_from_resource('/io/github/seadve/Kooha/shortcuts.ui')
+        builder.add_from_resource('/io/github/seadve/Kooha/ui/shortcuts.ui')
         window = builder.get_object('shortcuts')
         window.set_transient_for(self.window)
         window.present()
@@ -129,7 +131,9 @@ class Application(Gtk.Application):
         about.set_authors(
             [
                 "Dave Patrick",
-                "mathiascode"
+                "",
+                "mathiascode",
+                "FlexW",
             ]
         )
         about.set_comments(_("Elegantly record your screen"))

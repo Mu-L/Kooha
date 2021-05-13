@@ -27,7 +27,7 @@ from kooha.timers import DelayTimer, Timer
 Gst.init(None)
 
 
-@Gtk.Template(resource_path='/io/github/seadve/Kooha/window.ui')
+@Gtk.Template(resource_path='/io/github/seadve/Kooha/ui/window.ui')
 class KoohaWindow(Handy.ApplicationWindow):
     __gtype_name__ = 'KoohaWindow'
 
@@ -53,9 +53,9 @@ class KoohaWindow(Handy.ApplicationWindow):
         self.video_recorder = VideoRecorder()
 
         desktop_environment = GLib.getenv('XDG_CURRENT_DESKTOP')
-        if "GNOME" not in desktop_environment:
+        if not desktop_environment or "GNOME" not in desktop_environment:
             self.start_record_button.set_sensitive(False)
-            self.start_record_button.set_label(f"{desktop_environment} is not yet supported")
+            self.start_record_button.set_label(f"{desktop_environment or 'WM'} is not yet supported")
 
     @Gtk.Template.Callback()
     def on_start_record_button_clicked(self, widget):
@@ -117,7 +117,7 @@ class KoohaWindow(Handy.ApplicationWindow):
 
     def playchime(self):
         playbin = Gst.ElementFactory.make('playbin', 'playbin')
-        playbin.props.uri = 'resource://io/github/seadve/Kooha/chime.ogg'
+        playbin.props.uri = 'resource://io/github/seadve/Kooha/sounds/chime.ogg'
         playbin.set_state(Gst.State.PLAYING)
         bus = playbin.get_bus()
         bus.poll(Gst.MessageType.EOS, Gst.CLOCK_TIME_NONE)
